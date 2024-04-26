@@ -25,7 +25,7 @@ const Topbar = () => {
           {/* <IoPersonCircle className="text-gray-600 text-lg h-8 w-8" /> */}
           <img
             src="./profilepic.jpg"
-            className="h-10 w-10 rounded-md object-cover"
+            className="h-12 w-12 rounded-md object-cover"
           />
           <div>
             <h2 className="text-md font-bold">Dr Baloch</h2>
