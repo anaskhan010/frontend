@@ -22,7 +22,11 @@ const Topbar = () => {
         </div>
 
         <div className="h-10 flex items-center gap-2 rounded-lg bg-slate-100 p-2 hover:bg-purple-100">
-          <IoPersonCircle className="text-gray-600 text-lg h-8 w-8" />
+          {/* <IoPersonCircle className="text-gray-600 text-lg h-8 w-8" /> */}
+          <img
+            src="./profilepic.jpg"
+            className="h-10 w-10 rounded-md object-cover"
+          />
           <div>
             <h2 className="text-md font-bold">Dr Baloch</h2>
             <p className="text-xs text-purple-500">Admin</p>
