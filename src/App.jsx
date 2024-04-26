@@ -1,8 +1,19 @@
+// Libs
+import { Routes, Route } from "react-router-dom";
+
+// Components
+import Layout from "./Layout";
+import Dashboard from "./components/dashboard/Dashboard";
+
 function App() {
   return (
-    <>
-      <h1 className="text-4xl font-bold text-purple-500">Hello World</h1>
-    </>
+    <main>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </main>
   );
 }
 
