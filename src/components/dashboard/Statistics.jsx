@@ -80,6 +80,10 @@ const options = {
   plugins: {
     legend: {
       position: "top",
+      labels: {
+        usePointStyle: true, // Show a point style which defaults to a circle
+        pointStyle: "circle", // Explicitly set as circle
+      },
     },
   },
   scales: {
