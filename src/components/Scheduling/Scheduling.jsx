@@ -72,7 +72,7 @@ const Scheduling = () => {
           </thead>
           <tbody>
             <tr className="font-semibold text-gray-600">
-              <td className="p-2">1</td>
+              <td className="p-2">254531</td>
               <td className="p-2">J3433, T7373, 7654C</td>
               <td className="p-2">New</td>
               <td className="p-2">25,000</td>
@@ -84,7 +84,19 @@ const Scheduling = () => {
               </td>
             </tr>
             <tr className="font-semibold text-gray-600">
-              <td className="p-2">2</td>
+              <td className="p-2">254532</td>
+              <td className="p-2">JJ3433, T7373, 7654C</td>
+              <td className="p-2">In-Transit</td>
+              <td className="p-2">15,000</td>
+              <td className="p-2">Notes</td>
+              <td className="p-2">
+                <button className="px-2 py-1 rounded-md bg-purple-500 text-white font-bold">
+                  SCHEDULE
+                </button>
+              </td>
+            </tr>
+            <tr className="font-semibold text-gray-600">
+              <td className="p-2">254533</td>
               <td className="p-2">JJ3433, T7373, 7654C</td>
               <td className="p-2">In-Transit</td>
               <td className="p-2">15,000</td>
@@ -169,7 +181,7 @@ const Scheduling = () => {
           </thead>
           <tbody>
             <tr className="font-semibold text-gray-600">
-              <td className="p-2">1</td>
+              <td className="p-2">254531</td>
               <td className="p-2">J3433, T7373, 7654C</td>
               <td className="p-2">New</td>
               <td className="p-2">25,000</td>
@@ -181,7 +193,19 @@ const Scheduling = () => {
               </td>
             </tr>
             <tr className="font-semibold text-gray-600">
-              <td className="p-2">2</td>
+              <td className="p-2">254532</td>
+              <td className="p-2">JJ3433, T7373, 7654C</td>
+              <td className="p-2">In-Transit</td>
+              <td className="p-2">15,000</td>
+              <td className="p-2">Notes</td>
+              <td className="p-2">
+                <button className="px-2 py-1 rounded-md bg-purple-500 text-white font-bold">
+                  SCHEDULE
+                </button>
+              </td>
+            </tr>
+            <tr className="font-semibold text-gray-600">
+              <td className="p-2">254533</td>
               <td className="p-2">JJ3433, T7373, 7654C</td>
               <td className="p-2">In-Transit</td>
               <td className="p-2">15,000</td>

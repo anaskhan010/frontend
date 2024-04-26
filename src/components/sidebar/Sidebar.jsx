@@ -36,12 +36,14 @@ const Sidebar = () => {
             <p>Scheduling</p>
           </li>
         </NavLink>
-        <li className="flex items-center gap-2">
-          <span className="group p-2 rounded-lg hover:bg-purple-500">
-            <GoPersonAdd className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
-          </span>
-          <p>Employees</p>
-        </li>
+        <NavLink to="/patients">
+          <li className="flex items-center gap-2">
+            <span className="group p-2 rounded-lg hover:bg-purple-500">
+              <GoPersonAdd className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
+            </span>
+            <p>Patients</p>
+          </li>
+        </NavLink>
         <li className="flex items-center gap-2">
           <span className="group p-2 rounded-lg hover:bg-purple-500">
             <LuLayoutDashboard className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
