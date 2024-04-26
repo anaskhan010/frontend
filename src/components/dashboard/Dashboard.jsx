@@ -2,6 +2,7 @@ import React from "react";
 
 import { serveys, patients } from "./data";
 import { RiSurveyLine } from "react-icons/ri";
+import Statistics from "./Statistics";
 
 const Dashboard = () => {
   return (
@@ -100,6 +101,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      {/* Survey Chart */}
+      <Statistics />
     </section>
   );
 };
