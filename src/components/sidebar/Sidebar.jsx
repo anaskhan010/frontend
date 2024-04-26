@@ -44,12 +44,14 @@ const Sidebar = () => {
             <p>Patients</p>
           </li>
         </NavLink>
-        <li className="flex items-center gap-2">
-          <span className="group p-2 rounded-lg hover:bg-purple-500">
-            <LuLayoutDashboard className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
-          </span>
-          <p>Layout</p>
-        </li>
+        <NavLink to="/surveys">
+          <li className="flex items-center gap-2">
+            <span className="group p-2 rounded-lg hover:bg-purple-500">
+              <LuLayoutDashboard className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
+            </span>
+            <p>Surveys</p>
+          </li>
+        </NavLink>
         <li className="flex items-center gap-2">
           <span className="group p-2 rounded-lg hover:bg-purple-500">
             <HiOutlineMailOpen className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />

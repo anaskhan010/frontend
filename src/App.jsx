@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import Dashboard from "./components/dashboard/Dashboard";
 import Scheduling from "./components/Scheduling/Scheduling";
 import Patient from "./components/patients/Patient";
+import Surveys from "./components/surveys/Surveys";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="/scheduling" element={<Scheduling />} />
           <Route path="/patients" element={<Patient />} />
+          <Route path="/surveys" element={<Surveys />} />
         </Route>
       </Routes>
     </main>
