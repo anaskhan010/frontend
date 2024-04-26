@@ -2,6 +2,9 @@ import React from "react";
 
 import { serveys, patients } from "./data";
 import { RiSurveyLine } from "react-icons/ri";
+import { LuFilter } from "react-icons/lu";
+import { LuCalendar } from "react-icons/lu";
+
 import Statistics from "./Statistics";
 
 const Dashboard = () => {
@@ -102,7 +105,24 @@ const Dashboard = () => {
         </div>
       </div>
       {/* Survey Chart */}
-      <Statistics />
+      <div className="mt-8">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-600">Statistics</h2>
+          <div className="flex items-center gap-3">
+            <span className="p-2 rounded-lg bg-white gap-1 flex items-center ">
+              <LuFilter className="text-gray-600 text-lg h-6 w-6" />
+              <p>All Patients</p>
+            </span>
+            <span className="p-2 rounded-lg bg-white gap-1 flex items-center ">
+              <LuCalendar className="text-gray-600 text-lg h-6 w-6" />
+              <p>Last Month</p>
+            </span>
+          </div>
+        </div>
+        <div className="mt-4 p-4 rounded-lg bg-white shadow shadow-sm shadow-gray-300">
+          <Statistics />
+        </div>
+      </div>
     </section>
   );
 };

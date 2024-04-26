@@ -10,6 +10,7 @@ import {
   Legend,
 } from "chart.js";
 
+// Register required components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -19,21 +20,7 @@ ChartJS.register(
   Legend
 );
 
-const patients = [
-  {
-    title: "Total Patients",
-    value: 123980,
-  },
-  {
-    title: "Referred Patients",
-    value: 50098,
-  },
-  {
-    title: "Total Billable",
-    value: 45678,
-  },
-];
-
+// Define the months
 const months = [
   "Jan",
   "Feb",
@@ -49,68 +36,72 @@ const months = [
   "Dec",
 ];
 
+// Data simulation function
+const generateData = () =>
+  months.map(() => ({
+    totalPatients: Math.floor(Math.random() * 1000),
+    newPatients: Math.floor(Math.random() * 3000),
+    returningPatients: Math.floor(Math.random() * 2000),
+  }));
+
+const stackedData = generateData();
+
+// Chart data
 const data = {
   labels: months,
   datasets: [
     {
       label: "Total Patients",
-      data: Array.from({ length: 12 }, () => Math.floor(Math.random() * 10000)),
-      backgroundColor: "rgba(147, 112, 219, 0.6)",
-      borderColor: "rgba(147, 112, 219, 1)",
-      borderWidth: 1,
-      borderRadius: 5,
-      barPercentage: 0.5,
+      data: stackedData.map((d) => d.totalPatients),
+      backgroundColor: "rgba(216, 191, 216, 0.8)",
+      borderRadius: 10,
+      barPercentage: 0.7,
     },
     {
       label: "New Patients",
-      data: Array.from({ length: 12 }, () => Math.floor(Math.random() * 5000)),
-      backgroundColor: "rgba(186, 85, 211, 0.6)",
-      borderColor: "rgba(186, 85, 211, 1)",
-      borderWidth: 1,
-      borderRadius: 5,
-      barPercentage: 0.5,
+      data: stackedData.map((d) => d.newPatients),
+      backgroundColor: "rgba(186, 85, 211, 0.8)",
+      borderRadius: 10,
+      barPercentage: 0.7,
     },
     {
       label: "Returning Patients",
-      data: Array.from({ length: 12 }, () => Math.floor(Math.random() * 3000)),
-      backgroundColor: "rgba(216, 191, 216, 0.6)",
-      borderColor: "rgba(216, 191, 216, 1)",
-      borderWidth: 1,
-      borderRadius: 5,
-      barPercentage: 0.5,
+      data: stackedData.map((d) => d.returningPatients),
+      backgroundColor: "rgba(147, 112, 219, 0.8)",
+      borderRadius: 10,
+      barPercentage: 0.7,
     },
   ],
 };
 
+// Chart options
 const options = {
   responsive: true,
   plugins: {
     legend: {
       position: "top",
-      labels: {
-        usePointStyle: true,
-        pointStyle: "circle",
-        padding: 20,
-        color: "purple",
-      },
     },
   },
   scales: {
     x: {
+      stacked: true,
       grid: {
         display: false,
       },
     },
     y: {
+      stacked: true,
       grid: {
-        color: "rgba(0, 0, 0, 0.1)",
+        display: false,
       },
     },
   },
 };
 
-const Statistics = () => {
-  return <Bar data={data} options={options} />;
-};
+export const Statistics = () => (
+  <div>
+    <Bar data={data} options={options} />
+  </div>
+);
 
 export default Statistics;
