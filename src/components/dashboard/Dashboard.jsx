@@ -58,7 +58,7 @@ const Dashboard = () => {
       {/* Quick Schedule Section */}
       <div className="">
         <h2 className="text-2xl font-bold text-gray-600">Quick Schedule</h2>
-        <div className="mt-4 p-4 rounded-lg border border-gray-700 border-dashed grid grid-cols-2 gap-2">
+        <div className="mt-4 p-4 rounded-lg border-2 border-gray-700 border-dashed grid grid-cols-2 gap-2">
           <div>
             <p>Schedule Current Patient</p>
             <input

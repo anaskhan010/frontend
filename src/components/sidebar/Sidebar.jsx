@@ -1,5 +1,6 @@
 // Libs
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 // Icons
 import { TbBrandGoogleHome } from "react-icons/tb";
@@ -19,18 +20,22 @@ const Sidebar = () => {
         Hero
       </h1>
       <ul className="flex flex-col gap-8  mt-10">
-        <li className="flex items-center gap-2">
-          <span className="group p-2 rounded-lg hover:bg-purple-500">
-            <TbBrandGoogleHome className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
-          </span>
-          <p>Dashboard</p>
-        </li>
-        <li className="flex items-center gap-2">
-          <span className="group p-2 rounded-lg hover:bg-purple-500">
-            <HiOutlineDocumentText className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
-          </span>
-          <p>Documents</p>
-        </li>
+        <NavLink to="/">
+          <li className="flex items-center gap-2">
+            <span className="group p-2 rounded-lg hover:bg-purple-500">
+              <TbBrandGoogleHome className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
+            </span>
+            <p>Dashboard</p>
+          </li>
+        </NavLink>
+        <NavLink to="/scheduling">
+          <li className="flex items-center gap-2">
+            <span className="group p-2 rounded-lg hover:bg-purple-500">
+              <HiOutlineDocumentText className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
+            </span>
+            <p>Scheduling</p>
+          </li>
+        </NavLink>
         <li className="flex items-center gap-2">
           <span className="group p-2 rounded-lg hover:bg-purple-500">
             <GoPersonAdd className="text-gray-600 group-hover:text-white text-lg h-6 w-6" />
