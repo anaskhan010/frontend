@@ -5,7 +5,7 @@ import { RiSurveyLine } from "react-icons/ri";
 
 const Dashboard = () => {
   return (
-    <section className="p-2">
+    <section className="p-2 overflow-y-scroll scroll-smooth">
       <h1 className="text-2xl font-bold text-gray-600">Dashboards</h1>
       <p className="text-gray-500">Welcome to the dashboard</p>
 
